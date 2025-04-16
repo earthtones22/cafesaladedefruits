@@ -6,14 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>demars world</title>
 
-    <!-- Your Custom Favicon from Glitch Assets -->
     <link rel="icon" type="image/png" href="https://cdn.glitch.global/c23e4ea2-95ab-4021-9d85-45363a1cb295/Png%20ad%20final%20(Instagram%20Post)%20(1).png?v=1744158269335">
-    <!-- Note: Replace the URL above with YOUR actual Glitch asset URL -->
 
     <link rel="stylesheet" href="https://unpkg.com/98.css">
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <style>
-        /* --- Original Styles (Mostly Unchanged) --- */
         body {
             background: url('https://cdn.glitch.global/126c40fe-2dea-4fad-8fef-6ea8a978cb65/Png%20ad%20final%20(Instagram%20Post)%20(1).png?v=1740277014906')
                 no-repeat center center fixed;
@@ -22,7 +19,6 @@
             margin: 0;
             padding: 0;
             min-height: 100vh;
-             /* overflow: hidden; Prevent base scroll */
         }
 
         .taskbar {
@@ -44,7 +40,6 @@
             position: relative;
         }
 
-        /* --- Apply Font to ALL Buttons and specific elements --- */
         .start-button,
         button, /* Apply to all buttons */
         .desktop-icon div, /* Icon text */
@@ -54,7 +49,6 @@
         select { /* Apply to dropdowns */
             font-family: 'Press Start 2P', cursive;
         }
-         /* Override for specific popup content if needed */
          #contact-popup .window-content,
          pre#detail-description {
              font-size: 0.85em; /* Slightly smaller for readability */
@@ -141,7 +135,6 @@
             background: silver;
             border: 2px outset #fff;
             padding: 2px;
-            /* Font applied globally now */
             z-index: 10;
             box-shadow: 3px 3px 8px rgba(0,0,0,0.4);
             overflow: hidden; /* Keep hidden by default, content manages scroll */
@@ -150,7 +143,6 @@
         }
 
         .window-title {
-            /* --- CHANGE: Default Title Bar is now PINK --- */
             background: #FF69B4; /* Hot Pink */
             color: white;
             padding: 3px 5px;
@@ -159,23 +151,20 @@
             align-items: center;
             cursor: grab;
             height: 20px;
-            font-size: 0.8em; /* Keep title font small */
-            user-select: none; /* Prevent text selection during drag */
+            font-size: 0.8em; 
+            user-select: none; 
         }
-         /* Removed specific pink rules for contact/event as it's now default */
-
         .window-title:active {
             cursor: grabbing;
         }
 
-        /* --- CHANGE: Standardize Close Button Size --- */
         .window-title button {
              background: silver;
              border: 1px outset white;
-             padding: 0 5px; /* Consistent padding */
-             font-size: 1em; /* Relative to title font size */
+             padding: 0 5px; 
+             font-size: 1em; 
              line-height: 1;
-             height: 16px; /* Match height roughly */
+             height: 16px; 
              min-width: 16px;
              box-sizing: border-box;
         }
@@ -183,40 +172,39 @@
         .window-content {
             padding: 10px;
             background: silver;
-            overflow: auto; /* Allow content to scroll if it exceeds popup size */
-            height: calc(100% - 20px - 4px); /* Basic calculation relative to parent */
+            overflow: auto; 
+            height: calc(100% - 20px - 4px); 
             box-sizing: border-box;
         }
 
-        /* --- CHANGE: Standardize Buttons INSIDE Popups --- */
          .popup .window-content button,
-         .popup #checkout-button, /* Target specific IDs too */
+         .popup #checkout-button, 
          .popup #clear-cart-button {
-             padding: 5px 10px; /* Consistent padding */
-             font-size: 0.8em;  /* Consistent font size */
-             min-width: 80px; /* Minimum width */
+             padding: 5px 10px; 
+             font-size: 0.8em;  
+             min-width: 80px; 
              text-align: center;
-             margin: 5px 2px; /* Consistent margin */
+             margin: 5px 2px; 
              cursor: pointer;
          }
-          /* Specific overrides if needed */
-         .popup .window-content .back-button {
-             /* No override needed if above rule is sufficient */
-         }
-         /* Specific Width/Height/Layout for Cart Buttons (defined below) */
 
-          /* Remove button for cart items */
+         .popup .window-content .back-button {
+
+         }
+
+
+
          .cart-item button {
-             padding: 1px 4px !important; /* Override standard padding */
-             font-size: 0.7em !important; /* Smaller */
-             min-width: auto !important; /* Override min-width */
+             padding: 1px 4px !important; 
+             font-size: 0.7em !important; 
+             min-width: auto !important; 
              margin-left: 8px !important;
              background: #ddd;
              border: 1px outset #eee;
              line-height: 1;
          }
 
-        /* --- Store Popup --- REVERTED SIZE CONSTRAINTS --- */
+
         #store-popup {
             top: 10%;
             left: 50%;
@@ -225,9 +213,9 @@
 
         .product-grid {
             display: flex;
-            justify-content: space-around; /* Spreads items out horizontally */
+            justify-content: space-around; 
             padding: 20px;
-            flex-wrap: wrap; /* Allows items to wrap to next line */
+            flex-wrap: wrap; 
             gap: 15px;
         }
 
@@ -237,14 +225,14 @@
             padding: 10px;
             background: #ffffff;
             border: 2px solid #000;
-            width: 150px; /* Fixed width for cards */
+            width: 150px; 
 
         }
          .product-card div { font-size: 0.85em; margin-top: 5px;}
 
         .product-card img {
             width: 100%;
-            height: 160px; /* Default height for desktop */
+            height: 160px; 
             object-fit: cover;
         }
 
@@ -266,15 +254,15 @@
         }
 
         .product-detail-info {
-             overflow-y: auto; /* Allow details to scroll if needed */
+             overflow-y: auto;
         }
         .product-detail-info h2 { margin: 0 0 10px 0; font-size: 1.2em; }
         .product-detail-info select {
             margin: 8px 0;
             display: block;
-            padding: 3px; /* Smaller padding for selects */
-            font-size: 0.9em; /* Slightly smaller select font */
-            max-width: 200px; /* Limit width */
+            padding: 3px; 
+            font-size: 0.9em; 
+            max-width: 200px; 
         }
          .product-detail-info .price { margin: 10px 0; display: block; font-size: 1.1em; }
 
@@ -285,15 +273,15 @@
             margin: 10px 0;
             padding: 8px;
             border: 1px inset #aaa;
-            max-height: 120px; /* Limit description box height */
+            max-height: 120px; 
             overflow-y: auto;
             clear: both;
         }
 
         #detail-title { font-size: 1.1em; }
-        .back-button { margin-top: 15px; display: block; } /* Ensure it's block */
+        .back-button { margin-top: 15px; display: block; } 
 
-        /* --- Cart Popup Specific Styles --- */
+
         #cart-popup {
             width: 450px;
             height: 300px;
@@ -346,7 +334,6 @@
              float: right;
          }
 
-        /* --- Solitaire Popup Specific Styles (Original) --- */
         #solitaire-popup {
             width: 650px;
             height: 510px;
@@ -359,7 +346,6 @@
              height: 100%;
         }
 
-        /* --- Paint Popup Specific Styles (Original) --- */
         #paint-popup {
             width: 570px;
             height: 500px;
@@ -369,14 +355,13 @@
         #paint-popup .window-content { display: flex; padding: 0; height: 100%; }
         #paint-popup iframe { width: 100%; height: 100%; border: none; display: block; }
 
-        /* --- Contact Popup Styles --- */
         #contact-popup {
              width: 325px;
              height: 120px;
              top: 45%;
              left: 69%;
          }
-         #contact-popup .window-content img#contact-image { /* This style might not be used if you only have text */
+         #contact-popup .window-content img#contact-image 
              display: block;
              margin-top: 20px;
              max-width: 90%;
@@ -399,30 +384,28 @@
              max-width: 100%;
              height: auto;
              margin-bottom: 15px;
-             border: 1px solid black; /* Keep border for event images */
+             border: 1px solid black; 
          }
 
-        /* --- NEW 9lives Popup Styles --- */
         #nine-lives-popup {
-             width: 450px;  /* Same initial width as event */
-             height: 480px; /* Same initial height as event */
-             top: 8%;       /* Slightly different position */
-             left: 40%;     /* Slightly different position */
+             width: 450px; 
+             height: 480px;
+             top: 8%;     
+             left: 40%;     
          }
-         /* Style images within the 9lives popup */
+
          #nine-lives-popup .window-content img {
              display: block;
-             max-width: 100%; /* Prevent image overflow */
+             max-width: 100%; 
              height: auto;
-             margin-bottom: 15px; /* Space between images */
-             /* border: 1px solid black; REMOVED THIS LINE */
-             margin-left: auto;  /* Center images if narrower than content */
-             margin-right: auto; /* Center images if narrower than content */
+             margin-bottom: 15px; 
+             margin-left: auto; 
+             margin-right: auto; 
          }
 
-        /* --- Media Queries --- */
+
         @media (max-width: 767px) {
-            /* Make ALL popups take most of the screen (DEFAULT MOBILE)*/
+
             .popup {
                 width: 90vw !important;
                 height: 55vh !important;
@@ -434,7 +417,7 @@
                 max-height: 85vh;
             }
 
-            /* --- START: MOBILE POPUP SIZE OVERRIDES --- */
+
             #store-popup {
                  top: 3px !important;
                  height: 80vh !important;
@@ -453,8 +436,6 @@
              #solitaire-popup {
                  height: 60vh !important;
              }
-             /* #nine-lives-popup { height: 70vh !important; } /* Example override if needed */
-            /* --- END: MOBILE POPUP SIZE OVERRIDES --- */
 
              #cart-popup {
                  bottom: 45px !important;
@@ -466,11 +447,11 @@
                  transform: none !important;
              }
 
-            /* --- REST OF YOUR EXISTING MOBILE STYLES --- */
+
             .desktop {
                 height: auto;
                 padding-bottom: 60px;
-                padding-top: 25vh;    /* Icons pushed down */
+                padding-top: 25vh;  
                 box-sizing: border-box;
             }
             .desktop-icon {
@@ -481,21 +462,21 @@
              }
             .window-content { height: calc(100% - 20px - 4px) !important; }
 
-            /* Store layout adjustments for mobile */
+
             .product-grid {
-                justify-content: center; /* Center cards */
-                gap: 10px; /* Adjust gap slightly if needed */
+                justify-content: center; 
+                gap: 10px; 
             }
             .product-card {
-                width: 55vw; /* Make cards wider */
+                width: 55vw; 
             }
             .product-card img {
-                 height: auto; /* Let aspect-ratio determine height */
-                 aspect-ratio: 1 / 1; /* Make the image square */
-                 object-fit: cover; /* Ensure image covers the square area */
+                 height: auto; 
+                 aspect-ratio: 1 / 1; 
+                 object-fit: cover; 
             }
 
-             /* Product detail layout adjustments */
+
             .product-detail img {
                 width: 90%;
                 float: none;
@@ -505,18 +486,17 @@
             }
             .product-detail-info { height: auto; }
 
-            /* Event popup image adjustments */
+
              #event-popup .window-content img { max-width: 95%; margin-left: auto; margin-right: auto;}
 
-             /* --- 9lives mobile image adjustments --- */
-             /* Note: The border removal in the main rule above also applies here */
+
              #nine-lives-popup .window-content img {
-                 max-width: 95%; /* Slightly less than full width */
+                 max-width: 95%; 
              }
 
             .window-title { position: sticky; top: 0; z-index: 1; }
 
-             /* Adjust button sizes for mobile touch */
+
              .popup .window-content button,
              .popup #checkout-button,
              .popup #clear-cart-button {
@@ -529,7 +509,7 @@
                   font-size: 0.7em !important;
               }
 
-             /* Cart specific mobile adjustments */
+
               #cart-popup .window-content {
                   height: calc(100% - 20px - 4px - 75px) !important;
               }
@@ -548,14 +528,14 @@
                   padding: 10px 5px;
                   height: auto;
                }
-        } /* End of @media */
+
 
     </style>
 </head>
 
 <body>
 
-    <!-- Desktop Icons -->
+
     <div class="desktop">
         <div class="desktop-icon" style="top: 420px; left: 50px;">
             <img src="https://cdn.glitch.global/c23e4ea2-95ab-4021-9d85-45363a1cb295/Me%20renders%20(6).png?v=1743560104436" alt="Store Icon" onclick="togglePopup('store-popup')">
@@ -569,14 +549,12 @@
             <img src="https://cdn.glitch.global/c23e4ea2-95ab-4021-9d85-45363a1cb295/Me%20renders%20(3).png?v=1743556713262" alt="Paint Icon" onclick="togglePopup('paint-popup')">
             <div>Paint</div>
         </div>
-        <!-- ****************************************************** -->
-        <!-- ****** ADDED 9LIVES ICON - REPLACE SRC BELOW ****** -->
-        <!-- ****************************************************** -->
+
         <div class="desktop-icon" style="top: 300px; left: 180px;"> <!-- Adjust top/left as needed -->
              <img src="https://cdn.glitch.global/c23e4ea2-95ab-4021-9d85-45363a1cb295/Png%20ad%20final%20(Instagram%20Post).png?v=1744137092074" onclick="togglePopup('nine-lives-popup')">
             <div>9lives</div>
         </div>
-        <!-- ****************************************************** -->
+
         <div class="desktop-icon" style="top: 420px; left: 950px;">
              <img src="https://cdn.glitch.global/c23e4ea2-95ab-4021-9d85-45363a1cb295/Screenshot%202025-04-01%20200014.png?v=1743554390222" alt="Contact Icon" onclick="togglePopup('contact-popup')">
             <div>Contact</div>
@@ -589,7 +567,7 @@
 
     <!-- Popups -->
     <div class="popup" id="store-popup">
-        <div class="window-title"> <!-- Now pink by default -->
+        <div class="window-title">
             <span>Store</span>
             <button onclick="togglePopup('store-popup')">×</button>
         </div>
@@ -608,7 +586,7 @@
                     <img src="https://cdn.glitch.global/19a3d70d-afbd-4917-bdfd-f42ff8753b80/download%20(1).png?v=1740348338330" alt="Disk">
                     <div>DISK</div>
                 </div>
-                 <!-- Add more product cards here if needed -->
+
             </div>
             <div class="product-detail" id="product-detail" style="display: none;">
                 <img id="detail-image" src="/api/placeholder/300/300" alt="Product Detail">
@@ -631,23 +609,23 @@
         </div>
     </div>
 
-    <!-- Updated Cart Popup with Checkout Button -->
+
     <div class="popup" id="cart-popup">
-        <div class="window-title"> <!-- Now pink by default -->
+        <div class="window-title">
             <span>Cart</span>
             <button onclick="togglePopup('cart-popup')">×</button>
         </div>
         <div class="window-content" id="cart-content">
             <p>Your cart is empty</p>
-            <!-- Cart items will be dynamically added here -->
+
         </div>
         <div id="cart-total">Total: $0.00</div>
-        <!-- ADDED CHECKOUT AND CLEAR BUTTONS -->
+
         <button id="checkout-button" onclick="checkout()">Checkout</button>
         <button id="clear-cart-button" onclick="clearCart()">Clear Cart</button>
     </div>
 
-    <!-- START Solitaire Popup - Updated -->
+    <!-- START Solitaire Popup  -->
     <div class="popup" id="solitaire-popup">
         <div class="window-title"> <!-- Now pink by default -->
             <span>Solitaire</span>
@@ -657,22 +635,22 @@
             <!-- === NEW EMBED CODE START === -->
             <div id="solitaire_embed" style="width:100%; height: 100%; display: flex; flex-direction: column;">
               <style>
-                /* Scoped styles for the embed */
-                #solitaire_embed { font-family: sans-serif; } /* Reset font for embed UI */
-                #solitaire_embed > div:first-of-type { flex-grow: 1; } /* Make game container fill space */
+
+                #solitaire_embed { font-family: sans-serif; } 
+                #solitaire_embed > div:first-of-type { flex-grow: 1; } 
                 @media (max-width: 800px) {
                   #solitaire_embed > div:first-of-type {
-                    padding-bottom: 90% !important; /* Change aspect ratio on mobile */
+                    padding-bottom: 90% !important; 
                   }
                 }
                 @media (max-width: 568px) {
                   #solitaire_embed > div:first-of-type {
-                    padding-bottom: 100% !important; /* Change aspect ratio on mobile */
+                    padding-bottom: 100% !important; 
                   }
                 }
                 @media (max-width: 414px) {
                   #solitaire_embed > div:first-of-type {
-                    padding-bottom: 120% !important; /* Change aspect ratio on mobile */
+                    padding-bottom: 120% !important; 
                   }
                 }
               </style>
@@ -683,7 +661,7 @@
               <p style="font-size:16px;line-height:40px;width:100%;text-align:center;margin:0px; flex-shrink: 0;">
               </p>
             </div>
-            <!-- === NEW EMBED CODE END === -->
+            <!-- === EMBED CODE END === -->
         </div>
     </div>
     <!-- END Solitaire Popup -->
@@ -740,7 +718,7 @@
 
         </div>
     </div>
-    <!-- ****************************************************** -->
+
 
 
     <!-- Taskbar -->

@@ -1,96 +1,1103 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script defer src="/_vercel/insights/script.js"></script>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@exampledev/new.css@1.1.2/new.min.css"
-    />
-    <title>Vercel HTML Starter</title>
-    <meta
-      name="description"
-      content="High-performance HTML based website template."
-    />
-  </head>
-  <body>
-    <h1>Vercel HTML Starter</h1>
-    <p>
-      This template is a simple, but powerful single
-      <code>index.html</code> file deployed to
-      <a href="https://vercel.com">Vercel</a>. When your site is deployed, all
-      static assets (like HTML, JavaScript, CSS, images, and more) are deployed
-      globally to every
-      <a href="https://vercel.com/docs/concepts/edge-network/overview"
-        >Vercel Edge Network</a
-      >
-      region.
-    </p>
-    <h2>Simple, privacy-friendly analytics</h2>
-    <p>
-      Want to understand your visitor traffic? Vercel Analytics gives you
-      first-party, privacy-friendly traffic analytics for your HTML site. This
-      template is already configured using the following script:
-    </p>
-    <pre><code>&lt;script defer src="/_vercel/insights/script.js"&gt;&lt;/script&gt;</code></pre>
-    <p>
-      Learn more about
-      <a href="https://vercel.com/analytics">Vercel Analytics</a>.
-    </p>
-    <h2>Integrated with git</h2>
-    <p>
-      Deploying updates to your site is as simple as
-      <code>git push</code> thanks to Vercel's advanced
-      <a href="https://vercel.com/docs/concepts/git">Git Integration</a>.
-      Support for GitHub, GitLab, Bitbucket is zero-configuration, and with the
-      flexible Vercel CLI and API, you can integrate with any tool possible.
-    </p>
-    <p>
-      Learn more about
-      <a href="https://vercel.com/docs/concepts/git">Git Integration</a>.
-    </p>
-    <h2>Fast <code>gzip</code> compression</h2>
-    <p>
-      To help ensure the smallest possible file sizes for your static assets,
-      the Vercel Edge Network compresses files by default using
-      <code>gzip</code>. You can also optionally use
-      <code>brotli</code> compressesion if you prefer.
-    </p>
-    <p>
-      Learn more about
-      <a href="https://vercel.com/docs/concepts/edge-network/compression"
-        >compression</a
-      >.
-    </p>
-    <h2>Advanced routing configuration</h2>
-    <p>
-      Vercel gives you a variety of ways to configure the routing of your
-      website. For example, adding redirects, rewrites, or headers to your page.
-      While you can use <code>vercel.json</code> to define these through JSON,
-      you can also express your routing configuration as code using
-      <a href="https://vercel.com/docs/concepts/functions/edge-middleware"
-        >Vercel Edge Middleware</a
-      >.
-    </p>
-    <p>
-      Middleware runs before the
-      <a href="https://vercel.com/docs/concepts/edge-network/caching"
-        >Vercel Edge Network Cache</a
-      >, so you can configure routing exactly as your application needs. For
-      example, this template uses <code>middleware.js</code> defined in the root
-      of the repository to add additional security headers to the site:
-    </p>
-    <pre><code>referrer-policy: origin-when-cross-origin
-strict-transport-security: max-age=31536000; includeSubDomains; preload
-x-content-type-options: nosniff
-x-dns-prefetch-control: on
-x-frame-options: DENY</code></pre>
-    <p>
-      Learn more about
-      <a href="https://vercel.com/docs/concepts/functions/edge-middleware"
-        >Vercel Edge Middleware</a
-      >.
-    </p>
-  </body>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>demars world</title>
+
+    <!-- Your Custom Favicon from Glitch Assets -->
+    <link rel="icon" type="image/png" href="https://cdn.glitch.global/c23e4ea2-95ab-4021-9d85-45363a1cb295/Png%20ad%20final%20(Instagram%20Post)%20(1).png?v=1744158269335">
+    <!-- Note: Replace the URL above with YOUR actual Glitch asset URL -->
+
+    <link rel="stylesheet" href="https://unpkg.com/98.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <style>
+        /* --- Original Styles (Mostly Unchanged) --- */
+        body {
+            background: url('https://cdn.glitch.global/126c40fe-2dea-4fad-8fef-6ea8a978cb65/Png%20ad%20final%20(Instagram%20Post)%20(1).png?v=1740277014906')
+                no-repeat center center fixed;
+            background-size: cover;
+            font-family: 'Press Start 2P', cursive;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+             /* overflow: hidden; Prevent base scroll */
+        }
+
+        .taskbar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 99.3%;
+            height: 30px;
+            background: silver;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 5px;
+            border-top: 2px solid gray;
+            z-index: 1000;
+        }
+
+        .start-menu {
+            position: relative;
+        }
+
+        /* --- Apply Font to ALL Buttons and specific elements --- */
+        .start-button,
+        button, /* Apply to all buttons */
+        .desktop-icon div, /* Icon text */
+        .clock-cart,
+        .popup, /* Apply font to popup text */
+        #cart-total,
+        select { /* Apply to dropdowns */
+            font-family: 'Press Start 2P', cursive;
+        }
+         /* Override for specific popup content if needed */
+         #contact-popup .window-content,
+         pre#detail-description {
+             font-size: 0.85em; /* Slightly smaller for readability */
+             line-height: 1.5;
+         }
+
+
+        .start-dropdown {
+            display: none;
+            position: absolute;
+            bottom: 40px; /* Adjusted position */
+            left: 0;
+            background: silver;
+            border: 2px solid black;
+            padding: 10px;
+            width: 200px;
+            height: auto; /* Auto height */
+            z-index: 1001; /* Above taskbar */
+        }
+
+        .start-dropdown a {
+            display: block;
+            text-decoration: none;
+            color: black;
+            padding: 5px 0;
+             font-size: 0.8em; /* Match other small text */
+        }
+
+        .start-dropdown a:hover {
+            background: lightgray;
+        }
+
+        .clock-cart {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            position: relative;
+        }
+         /* Style Cart button in taskbar */
+         .clock-cart button {
+            padding: 2px 5px;
+            font-size: 1.1em; /* Make emoji slightly bigger */
+            line-height: 1;
+            min-width: auto; /* Allow natural width */
+         }
+
+        #clock {
+            padding: 5px;
+            border: 2px solid black;
+            background: silver;
+            min-width: 50px;
+            text-align: center;
+             font-size: 0.8em; /* Match other small text */
+        }
+
+        /* --- Desktop Icon Styles (Original + Color/Shadow) --- */
+        .desktop {
+             position: relative;
+             width: 100%;
+             height: calc(100vh - 40px); /* Avoid taskbar */
+         }
+
+        .desktop-icon {
+            position: absolute;
+            text-align: center;
+            cursor: pointer;
+            width: 120px;
+            color: white;
+            text-shadow: 1px 1px 2px black;
+             font-size: 0.8em; /* Smaller icon text */
+        }
+
+        .desktop-icon img {
+            width: 90px; /* Slightly smaller icons */
+            height: 90px;
+            display: block;
+            margin: 0 auto 5px auto;
+        }
+
+        /* --- Popup Styles (Original Base + Z-index) --- */
+        .popup {
+            display: none;
+            position: absolute;
+            background: silver;
+            border: 2px outset #fff;
+            padding: 2px;
+            /* Font applied globally now */
+            z-index: 10;
+            box-shadow: 3px 3px 8px rgba(0,0,0,0.4);
+            overflow: hidden; /* Keep hidden by default, content manages scroll */
+            max-width: 95vw; /* Add a max-width safety */
+            max-height: 85vh; /* Add a max-height safety */
+        }
+
+        .window-title {
+            /* --- CHANGE: Default Title Bar is now PINK --- */
+            background: #FF69B4; /* Hot Pink */
+            color: white;
+            padding: 3px 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: grab;
+            height: 20px;
+            font-size: 0.8em; /* Keep title font small */
+            user-select: none; /* Prevent text selection during drag */
+        }
+         /* Removed specific pink rules for contact/event as it's now default */
+
+        .window-title:active {
+            cursor: grabbing;
+        }
+
+        /* --- CHANGE: Standardize Close Button Size --- */
+        .window-title button {
+             background: silver;
+             border: 1px outset white;
+             padding: 0 5px; /* Consistent padding */
+             font-size: 1em; /* Relative to title font size */
+             line-height: 1;
+             height: 16px; /* Match height roughly */
+             min-width: 16px;
+             box-sizing: border-box;
+        }
+
+        .window-content {
+            padding: 10px;
+            background: silver;
+            overflow: auto; /* Allow content to scroll if it exceeds popup size */
+            height: calc(100% - 20px - 4px); /* Basic calculation relative to parent */
+            box-sizing: border-box;
+        }
+
+        /* --- CHANGE: Standardize Buttons INSIDE Popups --- */
+         .popup .window-content button,
+         .popup #checkout-button, /* Target specific IDs too */
+         .popup #clear-cart-button {
+             padding: 5px 10px; /* Consistent padding */
+             font-size: 0.8em;  /* Consistent font size */
+             min-width: 80px; /* Minimum width */
+             text-align: center;
+             margin: 5px 2px; /* Consistent margin */
+             cursor: pointer;
+         }
+          /* Specific overrides if needed */
+         .popup .window-content .back-button {
+             /* No override needed if above rule is sufficient */
+         }
+         /* Specific Width/Height/Layout for Cart Buttons (defined below) */
+
+          /* Remove button for cart items */
+         .cart-item button {
+             padding: 1px 4px !important; /* Override standard padding */
+             font-size: 0.7em !important; /* Smaller */
+             min-width: auto !important; /* Override min-width */
+             margin-left: 8px !important;
+             background: #ddd;
+             border: 1px outset #eee;
+             line-height: 1;
+         }
+
+        /* --- Store Popup --- REVERTED SIZE CONSTRAINTS --- */
+        #store-popup {
+            top: 10%;
+            left: 50%;
+            transform: translate(-50%, 0);
+         }
+
+        .product-grid {
+            display: flex;
+            justify-content: space-around; /* Spreads items out horizontally */
+            padding: 20px;
+            flex-wrap: wrap; /* Allows items to wrap to next line */
+            gap: 15px;
+        }
+
+        .product-card {
+            text-align: center;
+            cursor: pointer;
+            padding: 10px;
+            background: #ffffff;
+            border: 2px solid #000;
+            width: 150px; /* Fixed width for cards */
+
+        }
+         .product-card div { font-size: 0.85em; margin-top: 5px;}
+
+        .product-card img {
+            width: 100%;
+            height: 160px; /* Default height for desktop */
+            object-fit: cover;
+        }
+
+        .product-detail {
+            padding: 15px;
+            display: none;
+            box-sizing: border-box;
+            font-size: .9em;
+        }
+
+        .product-detail img {
+            width: 60%;
+            max-width: 250px;
+            height: auto;
+            max-height: 85%;
+            object-fit: contain;
+            margin-right: 15px;
+            float: left;
+        }
+
+        .product-detail-info {
+             overflow-y: auto; /* Allow details to scroll if needed */
+        }
+        .product-detail-info h2 { margin: 0 0 10px 0; font-size: 1.2em; }
+        .product-detail-info select {
+            margin: 8px 0;
+            display: block;
+            padding: 3px; /* Smaller padding for selects */
+            font-size: 0.9em; /* Slightly smaller select font */
+            max-width: 200px; /* Limit width */
+        }
+         .product-detail-info .price { margin: 10px 0; display: block; font-size: 1.1em; }
+
+        pre#detail-description {
+            background: silver;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            margin: 10px 0;
+            padding: 8px;
+            border: 1px inset #aaa;
+            max-height: 120px; /* Limit description box height */
+            overflow-y: auto;
+            clear: both;
+        }
+
+        #detail-title { font-size: 1.1em; }
+        .back-button { margin-top: 15px; display: block; } /* Ensure it's block */
+
+        /* --- Cart Popup Specific Styles --- */
+        #cart-popup {
+            width: 450px;
+            height: 300px;
+            bottom: 50px;
+            right: 20px;
+            top: auto;
+            left: auto;
+            transform: none;
+            z-index: 1001 !important;
+        }
+        #cart-popup .window-content {
+            font-size: 0.85em;
+            height: calc(100% - 20px - 4px - 65px);
+            box-sizing: border-box;
+            margin-bottom: 5px;
+        }
+
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 6px 0;
+            border-bottom: 1px solid #555;
+        }
+         .cart-item div:last-child { min-width: 60px; text-align: right;}
+
+        #cart-total {
+            font-weight: bold;
+            text-align: right;
+            padding: 8px 5px;
+            border-top: 1px solid #555;
+            font-size: 0.9em;
+            clear: both;
+            box-sizing: border-box;
+            height: 30px;
+            line-height: 1.2;
+        }
+
+        #checkout-button,
+        #clear-cart-button {
+             width: calc(50% - 7px);
+             margin: 5px 2px;
+             box-sizing: border-box;
+             min-width: unset;
+             height: 30px;
+             line-height: 1.5;
+             float: left;
+         }
+         #clear-cart-button {
+             float: right;
+         }
+
+        /* --- Solitaire Popup Specific Styles (Original) --- */
+        #solitaire-popup {
+            width: 650px;
+            height: 510px;
+            top: 4%;
+            left: 15%;
+        }
+         #solitaire-popup .window-content {
+             padding: 0;
+             overflow: hidden;
+             height: 100%;
+        }
+
+        /* --- Paint Popup Specific Styles (Original) --- */
+        #paint-popup {
+            width: 570px;
+            height: 500px;
+            top: 5%;
+            left: 15%;
+        }
+        #paint-popup .window-content { display: flex; padding: 0; height: 100%; }
+        #paint-popup iframe { width: 100%; height: 100%; border: none; display: block; }
+
+        /* --- Contact Popup Styles --- */
+        #contact-popup {
+             width: 325px;
+             height: 120px;
+             top: 45%;
+             left: 69%;
+         }
+         #contact-popup .window-content img#contact-image { /* This style might not be used if you only have text */
+             display: block;
+             margin-top: 20px;
+             max-width: 90%;
+             height: auto;
+             border: 1px inset gray;
+             margin-left: auto;
+             margin-right: auto;
+         }
+
+        /* --- Event Popup Styles --- */
+        #event-popup {
+             width: 450px;
+             height: 500px;
+             top: 5%;
+             left: 35%;
+         }
+         #event-popup .window-content { padding: 10px; }
+         #event-popup .window-content img {
+             display: block;
+             max-width: 100%;
+             height: auto;
+             margin-bottom: 15px;
+             border: 1px solid black; /* Keep border for event images */
+         }
+
+        /* --- NEW 9lives Popup Styles --- */
+        #nine-lives-popup {
+             width: 450px;  /* Same initial width as event */
+             height: 480px; /* Same initial height as event */
+             top: 8%;       /* Slightly different position */
+             left: 40%;     /* Slightly different position */
+         }
+         /* Style images within the 9lives popup */
+         #nine-lives-popup .window-content img {
+             display: block;
+             max-width: 100%; /* Prevent image overflow */
+             height: auto;
+             margin-bottom: 15px; /* Space between images */
+             /* border: 1px solid black; REMOVED THIS LINE */
+             margin-left: auto;  /* Center images if narrower than content */
+             margin-right: auto; /* Center images if narrower than content */
+         }
+
+        /* --- Media Queries --- */
+        @media (max-width: 767px) {
+            /* Make ALL popups take most of the screen (DEFAULT MOBILE)*/
+            .popup {
+                width: 90vw !important;
+                height: 55vh !important;
+                top: 5vh !important;
+                left: 5vw !important;
+                position: fixed !important;
+                z-index: 1001 !important;
+                transform: none !important;
+                max-height: 85vh;
+            }
+
+            /* --- START: MOBILE POPUP SIZE OVERRIDES --- */
+            #store-popup {
+                 top: 3px !important;
+                 height: 80vh !important;
+            }
+            #contact-popup {
+                height: auto !important;
+                max-height: 25vh !important;
+                left: 50% !important;
+                transform: translateX(-50%) !important;
+                width: 70vw !important;
+                top: 15vh !important;
+            }
+             #paint-popup {
+                height: 40vh !important;
+             }
+             #solitaire-popup {
+                 height: 60vh !important;
+             }
+             /* #nine-lives-popup { height: 70vh !important; } /* Example override if needed */
+            /* --- END: MOBILE POPUP SIZE OVERRIDES --- */
+
+             #cart-popup {
+                 bottom: 45px !important;
+                 top: auto !important;
+                 right: 5vw !important;
+                 left: 5vw !important;
+                 width: 90vw !important;
+                 height: 50vh !important;
+                 transform: none !important;
+             }
+
+            /* --- REST OF YOUR EXISTING MOBILE STYLES --- */
+            .desktop {
+                height: auto;
+                padding-bottom: 60px;
+                padding-top: 25vh;    /* Icons pushed down */
+                box-sizing: border-box;
+            }
+            .desktop-icon {
+                 position: relative;
+                 float: left;
+                 margin: 15px;
+                 left: auto !important; top: auto !important;
+             }
+            .window-content { height: calc(100% - 20px - 4px) !important; }
+
+            /* Store layout adjustments for mobile */
+            .product-grid {
+                justify-content: center; /* Center cards */
+                gap: 10px; /* Adjust gap slightly if needed */
+            }
+            .product-card {
+                width: 55vw; /* Make cards wider */
+            }
+            .product-card img {
+                 height: auto; /* Let aspect-ratio determine height */
+                 aspect-ratio: 1 / 1; /* Make the image square */
+                 object-fit: cover; /* Ensure image covers the square area */
+            }
+
+             /* Product detail layout adjustments */
+            .product-detail img {
+                width: 90%;
+                float: none;
+                margin: 0 auto 10px auto;
+                display: block;
+                max-width: 200px;
+            }
+            .product-detail-info { height: auto; }
+
+            /* Event popup image adjustments */
+             #event-popup .window-content img { max-width: 95%; margin-left: auto; margin-right: auto;}
+
+             /* --- 9lives mobile image adjustments --- */
+             /* Note: The border removal in the main rule above also applies here */
+             #nine-lives-popup .window-content img {
+                 max-width: 95%; /* Slightly less than full width */
+             }
+
+            .window-title { position: sticky; top: 0; z-index: 1; }
+
+             /* Adjust button sizes for mobile touch */
+             .popup .window-content button,
+             .popup #checkout-button,
+             .popup #clear-cart-button {
+                 padding: 8px 12px;
+                 font-size: 0.9em;
+                 min-width: 90px;
+             }
+             .cart-item button {
+                  padding: 1px 4px !important;
+                  font-size: 0.7em !important;
+              }
+
+             /* Cart specific mobile adjustments */
+              #cart-popup .window-content {
+                  height: calc(100% - 20px - 4px - 75px) !important;
+              }
+               #checkout-button,
+               #clear-cart-button {
+                   width: calc(50% - 10px) !important;
+                   height: auto;
+                   float: left;
+                   margin: 5px;
+               }
+                #clear-cart-button {
+                   float: right;
+               }
+               #cart-total {
+                  clear: both;
+                  padding: 10px 5px;
+                  height: auto;
+               }
+        } /* End of @media */
+
+    </style>
+</head>
+
+<body>
+
+    <!-- Desktop Icons -->
+    <div class="desktop">
+        <div class="desktop-icon" style="top: 420px; left: 50px;">
+            <img src="https://cdn.glitch.global/c23e4ea2-95ab-4021-9d85-45363a1cb295/Me%20renders%20(6).png?v=1743560104436" alt="Store Icon" onclick="togglePopup('store-popup')">
+            <div>Store</div>
+        </div>
+        <div class="desktop-icon" style="top: 300px; left: 50px;">
+            <img src="https://cdn.glitch.global/c23e4ea2-95ab-4021-9d85-45363a1cb295/Me%20renders%20(4).png?v=1743557882249" alt="Solitaire Icon" onclick="togglePopup('solitaire-popup')">
+            <div>Solitaire</div>
+        </div>
+        <div class="desktop-icon" style="top: 420px; left: 180px;">
+            <img src="https://cdn.glitch.global/c23e4ea2-95ab-4021-9d85-45363a1cb295/Me%20renders%20(3).png?v=1743556713262" alt="Paint Icon" onclick="togglePopup('paint-popup')">
+            <div>Paint</div>
+        </div>
+        <!-- ****************************************************** -->
+        <!-- ****** ADDED 9LIVES ICON - REPLACE SRC BELOW ****** -->
+        <!-- ****************************************************** -->
+        <div class="desktop-icon" style="top: 300px; left: 180px;"> <!-- Adjust top/left as needed -->
+             <img src="https://cdn.glitch.global/c23e4ea2-95ab-4021-9d85-45363a1cb295/Png%20ad%20final%20(Instagram%20Post).png?v=1744137092074" onclick="togglePopup('nine-lives-popup')">
+            <div>9lives</div>
+        </div>
+        <!-- ****************************************************** -->
+        <div class="desktop-icon" style="top: 420px; left: 950px;">
+             <img src="https://cdn.glitch.global/c23e4ea2-95ab-4021-9d85-45363a1cb295/Screenshot%202025-04-01%20200014.png?v=1743554390222" alt="Contact Icon" onclick="togglePopup('contact-popup')">
+            <div>Contact</div>
+        </div>
+        <div class="desktop-icon" style="top: 420px; left: 810px;">
+             <img src="https://cdn.glitch.global/c23e4ea2-95ab-4021-9d85-45363a1cb295/Screenshot%202025-04-01%20212101%20(1).png?v=1743557599654" alt="Event Icon" onclick="togglePopup('event-popup')">
+            <div>Event</div>
+        </div>
+    </div>
+
+    <!-- Popups -->
+    <div class="popup" id="store-popup">
+        <div class="window-title"> <!-- Now pink by default -->
+            <span>Store</span>
+            <button onclick="togglePopup('store-popup')">×</button>
+        </div>
+        <div class="window-content">
+            <div class="product-grid">
+                <!-- Product Cards -->
+                <div class="product-card" onclick="showProductDetail(0)">
+                    <img src="https://cdn.glitch.global/19a3d70d-afbd-4917-bdfd-f42ff8753b80/pixelsss?v=1740348057576" alt="T-Shirt">
+                    <div>T-SHIRT</div>
+                </div>
+                <div class="product-card" onclick="showProductDetail(2)">
+                    <img src="https://cdn.glitch.global/19a3d70d-afbd-4917-bdfd-f42ff8753b80/download%20(2).png?v=1740348335667" alt="Stickers">
+                    <div>STICKERS</div>
+                </div>
+                              <div class="product-card" onclick="showProductDetail(1)">
+                    <img src="https://cdn.glitch.global/19a3d70d-afbd-4917-bdfd-f42ff8753b80/download%20(1).png?v=1740348338330" alt="Disk">
+                    <div>DISK</div>
+                </div>
+                 <!-- Add more product cards here if needed -->
+            </div>
+            <div class="product-detail" id="product-detail" style="display: none;">
+                <img id="detail-image" src="/api/placeholder/300/300" alt="Product Detail">
+                <div class="product-detail-info">
+                    <h2 id="detail-title">Product Title</h2>
+                    <select id="size-select" style="display: none;">
+                        <option value="S">S</option> <option value="M">M</option> <option value="L">L</option> <option value="XL">XL</option>
+                    </select>
+                    <select id="sticker-select" onchange="updateStickerImage()" style="display: none;">
+                        <option value="">Select Sticker</option>
+                        <option value="0">carty</option> <option value="1">horsey</option> <option value="2">expectations</option>
+                        <option value="3">gato</option> <option value="4">PnG</option> <option value="5">sticker 3 pack</option>
+                    </select>
+                    <div class="price">$0.00</div>
+                    <button onclick="addToCart()">Add to Cart</button> <!-- Standardized -->
+                    <button class="back-button" onclick="showProductGrid()">← Back</button> <!-- Standardized -->
+                     <pre id="detail-description">Product description...</pre>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Updated Cart Popup with Checkout Button -->
+    <div class="popup" id="cart-popup">
+        <div class="window-title"> <!-- Now pink by default -->
+            <span>Cart</span>
+            <button onclick="togglePopup('cart-popup')">×</button>
+        </div>
+        <div class="window-content" id="cart-content">
+            <p>Your cart is empty</p>
+            <!-- Cart items will be dynamically added here -->
+        </div>
+        <div id="cart-total">Total: $0.00</div>
+        <!-- ADDED CHECKOUT AND CLEAR BUTTONS -->
+        <button id="checkout-button" onclick="checkout()">Checkout</button>
+        <button id="clear-cart-button" onclick="clearCart()">Clear Cart</button>
+    </div>
+
+    <!-- START Solitaire Popup - Updated -->
+    <div class="popup" id="solitaire-popup">
+        <div class="window-title"> <!-- Now pink by default -->
+            <span>Solitaire</span>
+            <button onclick="togglePopup('solitaire-popup')">×</button>
+        </div>
+        <div class="window-content">
+            <!-- === NEW EMBED CODE START === -->
+            <div id="solitaire_embed" style="width:100%; height: 100%; display: flex; flex-direction: column;">
+              <style>
+                /* Scoped styles for the embed */
+                #solitaire_embed { font-family: sans-serif; } /* Reset font for embed UI */
+                #solitaire_embed > div:first-of-type { flex-grow: 1; } /* Make game container fill space */
+                @media (max-width: 800px) {
+                  #solitaire_embed > div:first-of-type {
+                    padding-bottom: 90% !important; /* Change aspect ratio on mobile */
+                  }
+                }
+                @media (max-width: 568px) {
+                  #solitaire_embed > div:first-of-type {
+                    padding-bottom: 100% !important; /* Change aspect ratio on mobile */
+                  }
+                }
+                @media (max-width: 414px) {
+                  #solitaire_embed > div:first-of-type {
+                    padding-bottom: 120% !important; /* Change aspect ratio on mobile */
+                  }
+                }
+              </style>
+              <div style="position:relative;padding-bottom:75%;border-radius:6px;overflow:hidden;">
+                <iframe style="width:100%;height:100%;position:absolute;left:0px;top:0px;border:0px;" frameBorder="0" width="100%" height="100%" allowFullScreen="false" src="https://online-solitaire.com/krdd7unca9" title="Play Klondike (Turn 3) and many more Solitaire games at online-solitaire.com"></iframe>
+                <div style="position:absolute;width:100%;height:100%;top:0px;left:0px;pointer-events:none;box-shadow:inset 0px 0px 0px 1px rgba(0,0,0,0.25);border-radius:6px;"></div>
+              </div>
+              <p style="font-size:16px;line-height:40px;width:100%;text-align:center;margin:0px; flex-shrink: 0;">
+              </p>
+            </div>
+            <!-- === NEW EMBED CODE END === -->
+        </div>
+    </div>
+    <!-- END Solitaire Popup -->
+
+    <div class="popup" id="paint-popup">
+        <div class="window-title"> <!-- Now pink by default -->
+            <span>Paint</span>
+            <button onclick="togglePopup('paint-popup')">×</button>
+        </div>
+        <div class="window-content">
+            <iframe src="https://magic-half-hortensia.glitch.me/" title="Paint Application"></iframe>
+        </div>
+    </div>
+
+    <div class="popup" id="contact-popup">
+        <div class="window-title"> <!-- Now pink by default -->
+            <span>Contact</span>
+            <button onclick="togglePopup('contact-popup')">×</button>
+        </div>
+        <div class="window-content">
+            <p><strong>shop.demar64@gmail.com</strong><br> shop.demar64@gmail.com
+        </div>
+    </div>
+
+    <div class="popup" id="event-popup">
+        <div class="window-title"> <!-- Now pink by default -->
+            <span>The Demar Show</span>
+            <button onclick="togglePopup('event-popup')">×</button>
+        </div>
+        <div class="window-content">
+            <!-- Stacked Images -->
+            <img src="https://cdn.glitch.global/c23e4ea2-95ab-4021-9d85-45363a1cb295/a82862b2-4872-4d4c-a5ff-b9c35c9e4bc1%20(1).jpg?v=1743557240804" alt="Event Flyer 1 - T-Shirt">
+            <img src="https://cdn.glitch.global/c23e4ea2-95ab-4021-9d85-45363a1cb295/93ed5ae3-02e4-4719-9d30-aec2a6b4e30b.jpg?v=1743557228737" alt="Event Flyer 2 - Disk">
+            <img src="https://cdn.glitch.global/c23e4ea2-95ab-4021-9d85-45363a1cb295/1c7ec279-a57a-49e5-bee6-4f12c8cb68ca.jpg?v=1743558598239" alt="Event Flyer 3">
+            <img src="https://cdn.glitch.global/c23e4ea2-95ab-4021-9d85-45363a1cb295/119c4a43-9cfe-426b-94ae-dcd170a358fd.jpg?v=1743557235291" alt="Event Flyer 4">
+            <img src="https://cdn.glitch.global/c23e4ea2-95ab-4021-9d85-45363a1cb295/c744dd9e-4e15-4882-9fae-20c804b7f76c.jpg?v=1743557238006" alt="Event Flyer 5">
+            <img src="https://cdn.glitch.global/c23e4ea2-95ab-4021-9d85-45363a1cb295/d8d2a047-9ead-47fa-9b9f-d8a0faebeb49.jpg?v=1743558599464" alt="Event Flyer 6">
+            <img src="https://cdn.glitch.global/c23e4ea2-95ab-4021-9d85-45363a1cb295/efe66242-68b6-4bc2-95de-efe16e4b7377.jpg?v=1743558600897" alt="Event Flyer 6">
+            <img src="https://cdn.glitch.global/c23e4ea2-95ab-4021-9d85-45363a1cb295/Screenshot%202025-04-08%20125208.png?v=1744135891780" alt="Event Flyer 6">
+        </div>
+    </div>
+
+
+    <div class="popup" id="nine-lives-popup">
+        <div class="window-title">
+            <span>9lives</span>
+            <button onclick="togglePopup('nine-lives-popup')">×</button>
+        </div>
+        <div class="window-content">
+            <!-- === Stacked Images for 9lives - Replace SRC URLs === -->
+            <img src="https://cdn.glitch.global/c23e4ea2-95ab-4021-9d85-45363a1cb295/tumblr_1e8cd927409edc0c2e060a181542d394_7b47df11_250.webp?v=1744135887599" alt="9lives Image 1">
+            <img src="https://cdn.glitch.global/c23e4ea2-95ab-4021-9d85-45363a1cb295/cd.png?v=1744328168508" alt="9lives Image 3">
+
+
+        </div>
+    </div>
+    <!-- ****************************************************** -->
+
+
+    <!-- Taskbar -->
+    <div class="taskbar">
+        <div class="start-menu">
+            <button class="start-button" onclick="toggleStartMenu()">Start</button> <!-- Standardized -->
+            <div class="start-dropdown" id="start-dropdown">
+                <a href="https://soundcloud.com/demardefrozen" target="_blank" rel="noopener noreferrer">SoundCloud</a>
+                <a href="https://open.spotify.com/artist/0XRYKz53Fj8wPcmx0YLT8Z?si=7iG1cIRpSKaKoCyCzalJcg" target="_blank" rel="noopener noreferrer">Spotify</a>
+                <a href="https://music.apple.com/us/artist/demar-defrozen/1588087497" target="_blank" rel="noopener noreferrer">Apple Music</a>
+                <a href="https://demardefrozen.bandcamp.com/" target="_blank" rel="noopener noreferrer">Bandcamp</a>
+                <a href="https://www.instagram.com/demardefrozen" target="_blank" rel="noopener noreferrer">Instagram</a>
+                <a href="" target="_blank" rel="noopener noreferrer">OnlyFans</a>
+            </div>
+        </div>
+        <div class="clock-cart">
+            <button onclick="togglePopup('cart-popup')" title="Open Cart">🛒</button> <!-- Standardized -->
+            <div id="clock"></div>
+        </div>
+    </div>
+
+    <script>
+        // --- Product Data ---
+        const products = [
+            { id: 1, title: "ROT T-SHIRT", description: `Unisex\nMade in Montreal, Canada\nDouble-needle stitching\nPreshrunk cotton\n\nShipping time: Shipment in 2-5 weeks.\nOrders that include multiple items will ship when all items are ready for shipment.\nAll sales final. No refunds.`, price: 40.00, image: "https://cdn.glitch.global/c23e4ea2-95ab-4021-9d85-45363a1cb295/Png%20ad%20final%20(Instagram%20Post)%20(7).png?v=1743606437460", hasSizes: true, isSticker: false, detailImage: "https://cdn.glitch.global/c23e4ea2-95ab-4021-9d85-45363a1cb295/Png%20ad%20final%20(Instagram%20Post)%20(7).png?v=1743606437460" },
+            { id: 2, title: "CERAMIC DISK", description: `Glo-worm yellow and green mirror\nMade in Montreal, Canada\n\nShipping time: Shipment in 2-5 weeks.\nOrders that include multiple items will ship when all items are ready for shipment.\nAll sales final. No refunds.`, price: 10.00, image: "https://cdn.glitch.global/c23e4ea2-95ab-4021-9d85-45363a1cb295/New%20Project.png?v=1744330636037" },
+            { id: 3, title: "STICKERS", description: `Made in Montreal, Canada\n\nShipping time: Shipment in 2-5 weeks.\nOrders that include multiple items will ship when all items are ready for shipment.\nAll sales final. No refunds.`, price: 3.00, image: "https://cdn.glitch.global/19a3d70d-afbd-4917-bdfd-f42ff8753b80/download%20(2).png?v=1740348335667", hasSizes: false, isSticker: true, detailImage: "https://cdn.glitch.global/c23e4ea2-95ab-4021-9d85-45363a1cb295/carty?v=1741458741697",
+             stickerOptions: [
+                 { name: "carty", image: "https://cdn.glitch.global/c23e4ea2-95ab-4021-9d85-45363a1cb295/carty?v=1741458741697", price: 3.00 },
+                 { name: "horsey", image: "https://cdn.glitch.global/c23e4ea2-95ab-4021-9d85-45363a1cb295/38.png?v=1742064456859", price: 3.00 },
+                 { name: "expectations", image: "https://cdn.glitch.global/c23e4ea2-95ab-4021-9d85-45363a1cb295/36.png?v=1742064449902", price: 3.00 },
+                 { name: "gato", image: "https://cdn.glitch.global/c23e4ea2-95ab-4021-9d85-45363a1cb295/37.png?v=1742064453383", price: 3.00 },
+                 { name: "PnG", image: "https://cdn.glitch.global/c23e4ea2-95ab-4021-9d85-45363a1cb295/39.png?v=1742064460239", price: 3.00 },
+                 { name: "sticker 3 pack", image: "https://cdn.glitch.global/c23e4ea2-95ab-4021-9d85-45363a1cb295/35.png?v=1742064445252", price: 8.00 }
+             ]
+            }
+        ];
+
+        // --- Global State ---
+        let cart = JSON.parse(localStorage.getItem('rottonCart')) || [];
+        let activePopups = {};
+
+        // --- Clock ---
+        function updateClock() {
+            const now = new Date();
+            const timeString = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+            const clockElement = document.getElementById('clock');
+            if (clockElement) { clockElement.innerText = timeString; }
+        }
+        setInterval(updateClock, 60000);
+        updateClock();
+
+        // --- Popups ---
+        function togglePopup(id) {
+            const popup = document.getElementById(id);
+            if (!popup) return;
+            const isVisible = popup.style.display === 'block';
+            if (isVisible) {
+                popup.style.display = 'none';
+                delete activePopups[id];
+            } else {
+                let maxZ = 9;
+                Object.values(activePopups).forEach(p => {
+                    const currentZ = parseInt(p.style.zIndex || '10', 10);
+                    if (currentZ > maxZ) { maxZ = currentZ; }
+                });
+                popup.style.zIndex = Math.max(10, maxZ + 1);
+                popup.style.display = 'block';
+                activePopups[id] = popup;
+                // This logic brings the clicked popup to front, might not be needed if the maxZ calculation is enough
+                // Object.values(activePopups).forEach(p => p.style.zIndex = parseInt(p.style.zIndex || '10') -1 );
+                // popup.style.zIndex = Math.max(10, maxZ + 1);
+
+                if (id === 'store-popup') { showProductGrid(); }
+            }
+        }
+
+        // --- Start Menu ---
+        function toggleStartMenu() {
+            const menu = document.getElementById('start-dropdown');
+            if (!menu) return;
+            const isVisible = menu.style.display === 'block';
+             if (!isVisible) {
+                 let maxZ = 1000;
+                 Object.values(activePopups).forEach(p => {
+                     const currentZ = parseInt(p.style.zIndex || '10', 10);
+                     if (currentZ > maxZ) maxZ = currentZ;
+                 });
+                 const taskbarZ = parseInt(window.getComputedStyle(document.querySelector('.taskbar')).zIndex || '1000');
+                 maxZ = Math.max(maxZ, taskbarZ);
+                 menu.style.zIndex = maxZ + 1;
+             }
+            menu.style.display = isVisible ? 'none' : 'block';
+        }
+        document.addEventListener("click", function (event) {
+            const menu = document.getElementById("start-dropdown");
+            const button = document.querySelector(".start-button");
+            if (menu && button && menu.style.display === 'block' && !menu.contains(event.target) && !button.contains(event.target)) {
+                menu.style.display = "none";
+            }
+        });
+
+        // --- Store Logic ---
+        function showProductDetail(index) {
+            const product = products[index];
+            if (!product) return;
+            const gridView = document.querySelector('#store-popup .product-grid');
+            const detailView = document.getElementById('product-detail');
+            if (!gridView || !detailView) return;
+            gridView.style.display = 'none';
+            detailView.style.display = 'block';
+            document.getElementById('detail-image').src = product.detailImage || product.image;
+            document.getElementById('detail-image').alt = product.title + " detail";
+            document.getElementById('detail-title').textContent = product.title;
+            document.getElementById('detail-description').textContent = product.description;
+            const priceElement = detailView.querySelector('.price');
+            const sizeSelect = document.getElementById('size-select');
+            const stickerSelect = document.getElementById('sticker-select');
+            priceElement.textContent = `$${product.price.toFixed(2)}`;
+            priceElement.dataset.basePrice = product.price;
+            detailView.dataset.productId = product.id;
+            sizeSelect.style.display = product.hasSizes ? 'block' : 'none';
+            stickerSelect.style.display = product.isSticker ? 'block' : 'none';
+            if (product.isSticker) { stickerSelect.value = ""; updateStickerImage(); }
+            else { sizeSelect.value = sizeSelect.options[0]?.value || ''; }
+            document.querySelector('#store-popup .window-content').scrollTop = 0;
+        }
+        function showProductGrid() {
+            const gridView = document.querySelector('#store-popup .product-grid');
+            const detailView = document.getElementById('product-detail');
+            if (gridView && detailView) {
+                gridView.style.display = 'flex';
+                detailView.style.display = 'none';
+                document.querySelector('#store-popup .window-content').scrollTop = 0;
+            }
+        }
+        function updateStickerImage() {
+            const stickerSelect = document.getElementById('sticker-select');
+            const detailImage = document.getElementById('detail-image');
+            const priceElement = document.querySelector('#product-detail .price');
+            const product = products.find(p => p.isSticker);
+            if (!product || !stickerSelect || !detailImage || !priceElement) return;
+            const selectedIndex = stickerSelect.value;
+            if (selectedIndex !== "" && product.stickerOptions[selectedIndex]) {
+                const selectedOption = product.stickerOptions[selectedIndex];
+                detailImage.src = selectedOption.image;
+                detailImage.alt = selectedOption.name + " sticker";
+                priceElement.textContent = `$${selectedOption.price.toFixed(2)}`;
+            } else {
+                detailImage.src = product.detailImage || product.image;
+                detailImage.alt = product.title + " options";
+                priceElement.textContent = `$${product.price.toFixed(2)}`;
+            }
+        }
+
+        // --- Cart Logic ---
+        function saveCart() { localStorage.setItem('rottonCart', JSON.stringify(cart)); }
+        function addToCart() {
+            const productDetail = document.getElementById('product-detail');
+            if (!productDetail || !productDetail.dataset.productId) return;
+            const productId = parseInt(productDetail.dataset.productId, 10);
+            const product = products.find(p => p.id === productId);
+            if (!product) return;
+            let size = null, stickerChoice = null, itemPrice = product.price;
+            if (product.hasSizes) { size = document.getElementById('size-select').value; }
+            if (product.isSticker) {
+                const stickerSelect = document.getElementById('sticker-select');
+                const selectedIndex = stickerSelect.value;
+                if (selectedIndex !== "" && product.stickerOptions[selectedIndex]) {
+                    stickerChoice = product.stickerOptions[selectedIndex].name;
+                    itemPrice = product.stickerOptions[selectedIndex].price;
+                } else { alert("Please select a sticker type."); return; }
+            }
+            cart.push({ id: product.id, title: product.title, price: itemPrice, size: size, stickerChoice: stickerChoice, cartItemId: Date.now() + Math.random().toString(36).substr(2, 9) });
+            updateCartDisplay(); saveCart(); showProductGrid();
+            const cartPopup = document.getElementById('cart-popup');
+            if (cartPopup.style.display !== 'block') { togglePopup('cart-popup'); }
+            else {
+                 let maxZ = 9;
+                 Object.values(activePopups).forEach(p => { if(p !== cartPopup) { const currentZ = parseInt(p.style.zIndex || '10', 10); if (currentZ > maxZ) maxZ = currentZ;} });
+                 cartPopup.style.zIndex = Math.max(10, maxZ + 1);
+            }
+        }
+        function updateCartDisplay() {
+            const cartContent = document.getElementById('cart-content');
+            const cartTotalElement = document.getElementById('cart-total');
+            if (!cartContent || !cartTotalElement) return;
+            let total = 0; cartContent.innerHTML = '';
+            if (cart.length === 0) { cartContent.innerHTML = '<p>Your cart is empty</p>'; }
+            else {
+                cart.forEach(item => {
+                    total += item.price;
+                    const itemElement = document.createElement('div');
+                    itemElement.className = 'cart-item';
+                    itemElement.innerHTML = `
+                        <div>${item.title}${item.size ? ` (Size: ${item.size})` : ''}${item.stickerChoice ? ` (${item.stickerChoice})` : ''}</div>
+                        <div>$${item.price.toFixed(2)}</div>
+                        <button onclick="removeFromCart('${String(item.cartItemId)}')" title="Remove Item">×</button>`;
+                    cartContent.appendChild(itemElement);
+                });
+            }
+            cartTotalElement.textContent = `Total: $${total.toFixed(2)}`;
+        }
+         function removeFromCart(cartItemIdToRemove) {
+             const itemIndex = cart.findIndex(item => String(item.cartItemId) === String(cartItemIdToRemove));
+             if (itemIndex > -1) { cart.splice(itemIndex, 1); updateCartDisplay(); saveCart(); }
+             else { console.warn("Could not find item to remove with ID:", cartItemIdToRemove); }
+         }
+        function clearCart() { cart = []; updateCartDisplay(); saveCart(); }
+
+        // *** NEW: Checkout Function ***
+        function checkout() {
+             if (cart.length === 0) {
+                 alert("Your cart is empty.");
+                 return;
+             }
+            const shopifyCartUrl = buildShopifyCartUrl();
+            if (shopifyCartUrl) {
+                console.log("Redirecting to Shopify:", shopifyCartUrl);
+                window.open(shopifyCartUrl, '_blank');
+            } else {
+                console.error("Could not generate Shopify checkout URL.");
+                // Optionally alert the user here too
+                // alert("There was an error preparing your items for checkout. Please contact support.");
+            }
+        }
+
+        // *** NEW: Function to Build Shopify URL ***
+        function buildShopifyCartUrl() {
+             const variantMap = {
+                "1_S":  "51853437305196",
+                "1_M":  "51853437337964",
+                "1_L":  "51853437370732",
+                "1_XL": "51853437403500",
+                "2":    "51855717663084",
+                "3_carty":         "51853440319852",
+                "3_horsey":        "51853440287084",
+                "3_expectations":  "51853440418156",
+                "3_gato":          "51853440352620",
+                "3_PnG":           "51853440385388",
+                "3_sticker 3 pack":"51853440450924"
+             };
+             const shopifyDomain = "j57kkg-dc.myshopify.com"; // <<< REPLACE THIS IF NEEDED
+             let baseUrl = `https://${shopifyDomain}/cart/`;
+             let cartItems = [];
+             let mappingError = false;
+            const aggregatedCart = {};
+
+            cart.forEach(item => {
+                let mapKey = null;
+                if (item.id === 1 && item.size) { mapKey = `${item.id}_${item.size}`; }
+                else if (item.id === 2) { mapKey = `${item.id}`; }
+                else if (item.id === 3 && item.stickerChoice) { mapKey = `${item.id}_${item.stickerChoice}`; }
+                else { console.error("Cannot map item to Shopify variant:", item); mappingError = true; return; }
+
+                const variantId = variantMap[mapKey];
+                if (variantId) {
+                    if (aggregatedCart[variantId]) { aggregatedCart[variantId]++; }
+                    else { aggregatedCart[variantId] = 1; }
+                } else { console.error(`Missing Shopify Variant ID in variantMap for key: "${mapKey}"`, "Item:", item); mappingError = true; }
+            });
+
+            if (mappingError) {
+                 alert("Error: Could not prepare all items for checkout. One or more items could not be mapped to a Shopify product variant. Please check your cart or contact support.");
+                 return null;
+             }
+            for (const variantId in aggregatedCart) { cartItems.push(`${variantId}:${aggregatedCart[variantId]}`); }
+
+            if (cartItems.length > 0) { return baseUrl + cartItems.join(","); }
+            else { console.warn("No valid items found to build Shopify cart URL."); return null; }
+        }
+
+        // --- Dragging Popups ---
+        let currentPopup = null, dragOffsetX = 0, dragOffsetY = 0;
+        document.querySelectorAll('.window-title').forEach(titleBar => {
+            titleBar.addEventListener('mousedown', dragStart);
+        });
+        function dragStart(event) {
+             if (event.target.tagName === 'BUTTON') return; // Don't drag if clicking the close button
+             currentPopup = event.target.closest('.popup');
+            if (currentPopup) {
+                 // Bring popup to front
+                 let maxZ = 9;
+                 Object.values(activePopups).forEach(p => {
+                      if (p === currentPopup) return; // Skip self
+                      const currentZ = parseInt(p.style.zIndex || '10', 10);
+                      if (currentZ > maxZ) maxZ = currentZ;
+                  });
+                 currentPopup.style.zIndex = Math.max(10, maxZ + 1);
+
+                const rect = currentPopup.getBoundingClientRect();
+                const isFixed = window.getComputedStyle(currentPopup).position === 'fixed';
+                 if (isFixed) {
+                     // For fixed position (mobile view), offset is relative to viewport
+                     dragOffsetX = event.clientX - rect.left;
+                     dragOffsetY = event.clientY - rect.top;
+                 } else {
+                      // For absolute position (desktop view), offset is relative to offsetParent
+                     dragOffsetX = event.clientX - currentPopup.offsetLeft;
+                     dragOffsetY = event.clientY - currentPopup.offsetTop;
+                 }
+                document.addEventListener('mousemove', drag);
+                document.addEventListener('mouseup', dragEnd);
+                document.addEventListener('mouseleave', dragEnd); // Handle mouse leaving the window
+                currentPopup.querySelector('.window-title').style.cursor = 'grabbing';
+            }
+        }
+        function drag(event) {
+            if (currentPopup) {
+                event.preventDefault(); // Prevent text selection during drag
+                 const isFixed = window.getComputedStyle(currentPopup).position === 'fixed';
+                 let newX = event.clientX - dragOffsetX;
+                 let newY = event.clientY - dragOffsetY;
+
+                 // Basic boundary constraints (prevent dragging completely off-screen)
+                 const vpWidth = window.innerWidth;
+                 const vpHeight = window.innerHeight;
+                 const taskbarHeight = document.querySelector('.taskbar')?.offsetHeight || 40; // Estimate if not found
+
+                 // Allow dragging slightly off-screen but not completely
+                 const minX = -currentPopup.offsetWidth + 50; // Allow left edge up to 50px visible
+                 const maxX = vpWidth - 50; // Allow right edge up to 50px visible
+                 const minY = 0; // Don't allow dragging above the top
+                 const maxY = vpHeight - taskbarHeight; // Don't allow dragging below taskbar (approx)
+
+                 newX = Math.max(minX, Math.min(newX, maxX));
+                 newY = Math.max(minY, Math.min(newY, maxY));
+
+
+                currentPopup.style.left = newX + 'px';
+                currentPopup.style.top = newY + 'px';
+                // Important: Clear any transform when dragging starts/happens if you used it for initial centering
+                currentPopup.style.transform = 'none';
+            }
+        }
+        function dragEnd() {
+            if (currentPopup) {
+                currentPopup.querySelector('.window-title').style.cursor = 'grab'; // Reset cursor
+            }
+            document.removeEventListener('mousemove', drag);
+            document.removeEventListener('mouseup', dragEnd);
+            document.removeEventListener('mouseleave', dragEnd);
+            currentPopup = null; // Release the current popup
+        }
+
+        // --- Initial Load ---
+        document.addEventListener('DOMContentLoaded', () => {
+            updateCartDisplay();
+             // Make popups draggable on load
+             document.querySelectorAll('.popup').forEach(popup => {
+                 popup.querySelectorAll('.window-title').forEach(titleBar => {
+                    // Check if listener already exists might be overkill unless dynamically adding titles
+                    titleBar.removeEventListener('mousedown', dragStart); // Remove first to prevent duplicates if run multiple times
+                    titleBar.addEventListener('mousedown', dragStart);
+                 });
+             });
+        });
+    </script>
+</body>
 </html>

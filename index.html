@@ -177,8 +177,17 @@
         .popup-reserve-button { display: inline-block; margin-top: 15px; }
 
 
-        /* --- Footer --- */
-        .site-footer { text-align: center; padding: 25px 20px; margin-top: 0; background-color: #f1eadd; color: #666; font-size: 0.9rem; }
+           <footer class="site-footer">
+        <p>© <span id="year"></span> Cafe Salade de Fruits. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Popup Modal -->
+    <div id="welcome-popup-backdrop" class="popup-backdrop">
+        <div id="welcome-popup" class="popup-content">
+            <button class="close-popup-btn" onclick="closePopup()">&times;</button>
+            <img src="holiday-closure.jpg" alt="Holiday Closure Notice">
+        </div>
+    </div>
 
         /* --- Scroll Animation --- */
         .scroll-animate { opacity: 0; transform: translateY(40px) scale(0.95); transition: opacity 0.8s ease-out, transform 0.8s ease-out; }
